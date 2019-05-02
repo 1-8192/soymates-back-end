@@ -1,0 +1,12 @@
+class CreateRecipes < ActiveRecord::Migration[5.2]
+  def change
+    create_table :recipes do |t|
+      t.string :name
+      t.string :img
+      t.string :roll_type
+      t.string :instructions
+
+      t.timestamps
+    end
+  end
+end
