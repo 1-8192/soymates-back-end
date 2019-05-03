@@ -5,11 +5,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :recipes, only: [:index]
       resources :users, only: [:create]
-      post '/login', to: 'auth#create'
+      post '/login', to: 'users#create'
       get '/profile', to: 'users#profile'
     end
   end
 
-  
+
 
 end
