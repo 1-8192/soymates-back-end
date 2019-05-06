@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-skip_before_action :authorized, only: [:create]
+skip_before_action :authorized, only: [:create, :destroy]
 
   def index
     @users = User.all
@@ -18,6 +18,12 @@ skip_before_action :authorized, only: [:create]
   def show
     @user= User.find(params[:id])
     render json: @user
+  end
+
+  def destroy
+    @user=User.find(params[:id])
+    @user.destroy
+    render json: @users
   end
 
   private

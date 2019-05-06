@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :recipes, only: [:index]
-      resources :users, only: [:index, :create, :show]
+      resources :users, only: [:index, :create, :show, :destroy]
       post '/signup', to: 'users#create'
-      get '/profile', to: 'users#show'
       post '/login', to: 'auth#create'
       get '/current_user', to: 'auth#current_profile'
     end
