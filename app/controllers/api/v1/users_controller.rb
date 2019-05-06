@@ -10,6 +10,11 @@ skip_before_action :authorized, only: [:create]
     end
   end
 
+  def show
+    @user= User.find(params[:id])
+    render json: @user
+  end 
+
   def profile
     render json: {user: UserSerializer.new(current_user)}, status: :accepted
   end

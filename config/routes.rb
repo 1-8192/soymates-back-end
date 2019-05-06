@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :recipes, only: [:index]
-      resources :users, only: [:create]
-      post '/login', to: 'users#create'
+      resources :users, only: [:create, :show]
+      post '/signup', to: 'users#create'
+      post '/profile', to: 'users#show'
+      post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
     end
   end
