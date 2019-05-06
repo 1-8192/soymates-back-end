@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :recipes, only: [:index]
-      resources :users, only: [:create, :show]
+      resources :users, only: [:index, :create, :show]
       post '/signup', to: 'users#create'
-      post '/profile', to: 'users#show'
+      get '/profile', to: 'users#show'
       post '/login', to: 'auth#create'
-      get '/profile', to: 'users#profile'
+      get '/current_user', to: 'auth#current_profile'
     end
   end
 

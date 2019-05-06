@@ -5,13 +5,12 @@ before_action :authorized
     JWT.encode(payload, 'soymates')
   end
 
-  def decode_token(token)
+  def decode_token
     if auth_header
       token = auth_header.split(' ')[1]
     begin
       JWT.decode(token, 'soymates', true, algorithm: 'HS256')
-    rescue
-      JWT::DecodeError
+    rescue JWT::DecodeError
       nil
     end
   end
