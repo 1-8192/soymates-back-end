@@ -22,6 +22,6 @@ spicy_dragon_roll = Recipe.create(name: 'Spicy Dragon Roll', img: 'https://www.j
 red_snapper_hand_roll = Recipe.create(name: 'Red Snapper Hand Roll', img: 'https://images.japancentre.com/recipes/pics/3/main/temaki.jpg?1525950817', roll_type: 'Hand Roll', instructions: 'put salmon, avocado, tempura, tobiko, and chipotle mayo in rice and roll it by hand')
 Octopus_sushi = Recipe.create(name: 'Octopus Sushi', img: 'https://previews.123rf.com/images/ryzhkov86/ryzhkov861702/ryzhkov86170200012/71762175-japanese-sushi-tako-nigiri-sushi-octopus-sushi-on-white-background.jpg', roll_type: 'Nigiri', instructions: 'put octopus on some rice and do not roll.')
 
-loved = Review.create(title: 'loved it', rating: 5, body: 'some of the best octopus sushi i have ever had', user_id: 5, recipe_id: 10)
-yum = Review.create(title: 'yumm', rating: 4, body: 'tuna done right is great. wishing for spice', user_id: 6, recipe_id: 6)
-fire = Review.create(title: 'OD FIRE', rating: 5, body: 'the only sushi will ever need to eat', user_id: 5, recipe_id: 8)
+# loved = Review.create(title: 'loved it', rating: 5, body: 'some of the best octopus sushi i have ever had', user_id: 3, recipe_id: 5)
+# yum = Review.create(title: 'yumm', rating: 4, body: 'tuna done right is great. wishing for spice', user_id: 3, recipe_id: 6)
+# fire = Review.create(title: 'OD FIRE', rating: 5, body: 'the only sushi will ever need to eat', user_id: 4, recipe_id: 8)
