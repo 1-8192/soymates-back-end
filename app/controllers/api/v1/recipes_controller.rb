@@ -1,4 +1,8 @@
 class Api::V1::RecipesController < ApplicationController
+<<<<<<< HEAD
+=======
+# skip_before_action :authorized, only: [:index]
+>>>>>>> b2e197176dc556ab87571cb1a849c366156ef4a7
 
   def index
     @recipes = Recipe.all
@@ -8,6 +12,17 @@ class Api::V1::RecipesController < ApplicationController
   def create
     @recipe = Recipe.create(recipe_params)
     render json: @recipe
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    @recipe.update(recipe_params)
+    render json: @recipe
+  end
+
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
   end
 
   private

@@ -1,5 +1,9 @@
 class Api::V1::UsersController < ApplicationController
+<<<<<<< HEAD
 skip_before_action :authorized, only: [:create]
+=======
+# skip_before_action :authorized, only: [:create, :destroy]
+>>>>>>> b2e197176dc556ab87571cb1a849c366156ef4a7
 
   def index
     @users = User.all
