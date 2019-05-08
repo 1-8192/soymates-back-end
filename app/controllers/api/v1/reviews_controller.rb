@@ -11,6 +11,18 @@ skip_before_action :authorized
     render json: @review
   end
 
+  def update
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+    render json: @review
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    render json: @reviews
+  end 
+
   private
 
   def review_params
