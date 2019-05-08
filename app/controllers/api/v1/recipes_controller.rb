@@ -1,8 +1,12 @@
 class Api::V1::RecipesController < ApplicationController
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # skip_before_action :authorized, only: [:index]
 >>>>>>> b2e197176dc556ab87571cb1a849c366156ef4a7
+=======
+skip_before_action :authorized, only: [:index]
+>>>>>>> alessandro-allegranzi
 
   def index
     @recipes = Recipe.all

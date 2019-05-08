@@ -1,5 +1,9 @@
 class Api::V1::ReviewsController < ApplicationController
+<<<<<<< HEAD
 # skip_before_action :authorized, only: [:index]
+=======
+skip_before_action :authorized
+>>>>>>> alessandro-allegranzi
 
   def index
     @reviews = Review.all
@@ -10,6 +14,18 @@ class Api::V1::ReviewsController < ApplicationController
     @review = Review.create(review_params)
     render json: @review
   end
+
+  def update
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+    render json: @review
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    render json: @reviews
+  end 
 
   private
 
