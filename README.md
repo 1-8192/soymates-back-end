@@ -1,24 +1,5 @@
-# README
+## SoyMates Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend for SoyMates. Check out the frontend [here](https://github.com/1-8192/soymates-front-end "SoyMates Frontend").
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bundle install` and `rails s -p 3005`
